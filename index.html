@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMaster - Learn Math the Fun Way!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🧮</span>
+                <h1>MathMaster</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="home">Home</button>
+                <button class="nav-btn" data-section="lessons">Lessons</button>
+                <button class="nav-btn" data-section="practice">Practice</button>
+                <button class="nav-btn" data-section="progress">Progress</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="hero">
+                    <h2>Welcome to MathMaster!</h2>
+                    <p>Master mathematics through interactive lessons and fun practice exercises.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showSection('lessons')">Start Learning</button>
+                        <button class="btn-secondary" onclick="showSection('practice')">Practice Now</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="lessons-completed">0</div>
+                        <div class="stat-label">Lessons Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="problems-solved">0</div>
+                        <div class="stat-label">Problems Solved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="current-streak">0</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="accuracy-rate">0%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Section -->
+            <section id="lessons" class="section">
+                <h2>Math Lessons</h2>
+                <div class="lessons-grid" id="lessons-container">
+                    <!-- Lessons will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section id="practice" class="section">
+                <h2>Practice Mode</h2>
+                <div class="practice-container">
+                    <div class="difficulty-selector">
+                        <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                    </div>
+
+                    <div class="problem-container">
+                        <div class="problem-display" id="problem-display">
+                            <!-- Math problems will appear here -->
+                        </div>
+
+                        <div class="answer-input">
+                            <input type="number" id="user-answer" placeholder="Enter your answer">
+                            <button class="btn-primary" onclick="checkAnswer()">Submit</button>
+                        </div>
+
+                        <div class="feedback" id="feedback"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress" class="section">
+                <h2>Your Progress</h2>
+                <div class="progress-container">
+                    <canvas id="progress-chart" width="400" height="300"></canvas>
+                    <div class="progress-details">
+                        <h3>Recent Activity</h3>
+                        <div id="recent-activity"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 MathMaster. Learn math, one problem at a time!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
