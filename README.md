@@ -1,3 +1,24 @@
+# NOTES
+
+
+
+## Prompt
+```
+Create a Website to Learn Math
+```
+
+One shot
+
+## Review
+
+Bad, Buggy
+
+---
+
+AI GENERATED
+
+---
+
 # MathMaster - Interactive Math Learning Website
 
 A modern, engaging web application designed to help students learn mathematics through interactive lessons and practice exercises.
