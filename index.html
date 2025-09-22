@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeAI - AI-Powered Resume Generation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>ResumeAI</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How it Works</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Create <span class="gradient-text">Professional Resumes</span><br>
+                        with <span class="gradient-text">AI Power</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform your career story into a compelling resume using advanced AI technology.
+                        Simply describe your experience, and watch as our LLM creates a perfectly formatted,
+                        ATS-optimized resume tailored to your industry.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('generator')">
+                            <i class="fas fa-magic"></i>
+                            Generate Resume Now
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('features')">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="resume-preview">
+                                <div class="resume-line"></div>
+                                <div class="resume-line short"></div>
+                                <div class="resume-line"></div>
+                                <div class="resume-line medium"></div>
+                                <div class="resume-bullet"></div>
+                                <div class="resume-bullet"></div>
+                                <div class="resume-bullet"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ai-brain">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="floating-element e1"></div>
+            <div class="floating-element e2"></div>
+            <div class="floating-element e3"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose ResumeAI?</h2>
+                <p class="section-subtitle">
+                    Powered by cutting-edge Large Language Models, our platform delivers
+                    professional resumes that get noticed
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">
+                        Generate professional resumes in seconds, not hours.
+                        Our AI processes your information instantly.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">AI-Powered</h3>
+                    <p class="feature-description">
+                        Advanced LLMs analyze your experience and craft compelling
+                        narratives that highlight your strengths.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">ATS Optimized</h3>
+                    <p class="feature-description">
+                        Built-in ATS optimization ensures your resume passes
+                        automated screening systems with flying colors.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="feature-title">Multiple Templates</h3>
+                    <p class="feature-description">
+                        Choose from professionally designed templates that
+                        match your industry and personal style.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="feature-title">Easy Customization</h3>
+                    <p class="feature-description">
+                        Edit and refine your resume with our intuitive editor.
+                        Make it truly yours with just a few clicks.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">
+                        Your data is encrypted and secure. We never store
+                        your personal information without consent.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How ResumeAI Works</h2>
+                <p class="section-subtitle">
+                    Three simple steps to your perfect resume
+                </p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Describe Your Experience</h3>
+                        <p class="step-description">
+                            Tell us about your background, skills, achievements, and career goals.
+                            The more details you provide, the better your resume will be.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">AI Generates Your Resume</h3>
+                        <p class="step-description">
+                            Our advanced LLM analyzes your information and creates a professional,
+                            ATS-optimized resume tailored to your industry and experience level.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Download & Customize</h3>
+                        <p class="step-description">
+                            Download your resume in multiple formats (PDF, DOCX) and use our
+                            built-in editor to make any final adjustments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Preview Section -->
+    <section id="generator" class="generator-preview">
+        <div class="container">
+            <div class="generator-content">
+                <div class="generator-text">
+                    <h2 class="section-title">Ready to Create Your Resume?</h2>
+                    <p class="section-subtitle">
+                        Try our AI resume generator now. Simply describe your experience
+                        and watch as we create a professional resume for you.
+                    </p>
+                </div>
+                <div class="generator-form">
+                    <div class="form-group">
+                        <label for="prompt">Describe your professional background:</label>
+                        <textarea
+                            id="prompt"
+                            placeholder="e.g., I'm a software engineer with 5 years of experience in full-stack development. I've worked with React, Node.js, Python, and cloud technologies. I led a team of 3 developers on a major e-commerce project..."
+                            rows="6"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Target Industry:</label>
+                        <select id="industry">
+                            <option value="">Select Industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="finance">Finance</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary btn-large" onclick="generateResume()">
+                        <i class="fas fa-magic"></i>
+                        Generate My Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-subtitle">
+                    Join thousands of professionals who've transformed their careers with ResumeAI
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"ResumeAI transformed my career! I went from struggling to write my resume to having a professional document that got me interviews at top tech companies."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>Software Engineer at Google</span>
+                        </div>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI understood my experience perfectly and created a resume that highlighted my achievements in ways I never thought of. Landed my dream job!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Michael Rodriguez</strong>
+                            <span>Product Manager at Amazon</span>
+                        </div>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As someone changing careers, ResumeAI helped me translate my skills into language that resonated with hiring managers. Game changer!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Emily Watson</strong>
+                            <span>UX Designer at Meta</span>
+                        </div>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ResumeAI</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering professionals with AI-driven resume generation.
+                        Create compelling resumes that get you noticed.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><a href="#generator">Try Demo</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ResumeAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
